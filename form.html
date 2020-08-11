@@ -35,7 +35,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 
 	<div class="agileits-main">
 		<div class="wrap">
-		<form action="#" method="post">
+		<form action="localhost:3030/api/v1/auth/sign_up" method="post">
 		
 			<ul>
 				<li class="text">E-mail  :  </li>
@@ -44,43 +44,48 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 			<ul>
 				<li class="text">name  :  </li>
 				<li><input name="name" type="text" required></li>
+				<div class="check"><div class="inside"></div></div>
 			</ul>
 			<ul>
-				<li class="text">Year  :  </li>
-				<li><input name="year" type="text" required></li>
+				<li class="number">Year  :  </li>
+				<li><input name="year" type="number" min="1" max="4" required></li>
+				<div class="check"><div class="inside"></div></div>
 			</ul>
 			<ul>
-				<li class="text">mobile no  :  </li>
-				<li><input name="mobile" type="text" required></li>
+				<li class="number">mobile no  :  </li>
+				<li><input name="mobile" type="tel" type="tel" size="10" placeholder="9910-583-896" pattern="[0-9]{4}-[0-9]{3}-[0-9]{3}" minlength="7" maxlength="12" required></li>
+				<div class="check"><div class="inside"></div></div>
 			</ul>
 			<ul>
 				<li class="text">section :  </li>
 				<li><input name="section" type="text" required></li>
+				<div class="check"><div class="inside"></div></div>
 			</ul>
 			<ul>
-				<li class="text">roll no  :  </li>
-				<li><input name="roll no" type="text" required></li>
+				<li class="number">roll no  :  </li>
+				<li><input name="roll no" type="number" size="12" minlength="10" maxlength="12" required></li>
+				<div class="check"><div class="inside"></div></div>
 			</ul>
 			<ul>
 				<li class="text"><span style="color:white;">Language :  </li>
 				<ul>
-				<input type="checkbox" id="a-option" name="selector1">
+				<input type="checkbox" id="a-option" name="languageCheckboxes" value = "C">
 				<label for="a-option"><span style="color:white;">C</label>
-				<div class="check"></div>
+				<div class="check"><div class="inside"></div></div>
 				
-				<input type="checkbox" id="b-option" name="selector1">
+				<input type="checkbox" id="b-option" name="languageCheckboxes" value = "C++">
 				<label for="b-option"><span style="color:white;">C++</label>
 				<div class="check"><div class="inside"></div></div>
 				
-				<input type="checkbox" id="c-option" name="selector1">
+				<input type="checkbox" id="c-option" name="languageCheckboxes" value = "Java">
 				<label for="c-option"><span style="color:white;">Java</label>
 				<div class="check"><div class="inside"></div></div>
 				
-				<input type="checkbox" id="d-option" name="selector1">
+				<input type="checkbox" id="d-option" name="languageCheckboxes" value = "Python">
 				<label for="d-option"><span style="color:white;">Python</label>
-				<div class="check"></div>
+				<div class="check"><div class="inside"></div></div>
 				
-				<input type="checkbox" id="e-option" name="selector1">
+				<input type="checkbox" id="e-option" name="languageCheckboxes" value = "Other">
 				<label for="e-option"><span style="color:white;">Other</label>
 				<div class="check"><div class="inside"></div></div>
 				</ul>
@@ -89,28 +94,28 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 			<ul>
 					<li class="text"><span style="color:white;">Skills :  </li>
 					<ul>
-					<input type="checkbox" id="a-option" name="selector1">
+					<input type="checkbox" id="a-option" name="skillsCheckboxes" value="Web Developer">
 					<label for="a-option"><span style="color:white;">Web Developer</label>
-					<div class="check"></div>
+					<div class="check"><div class="inside"></div></div>
 					
-					<input type="checkbox" id="b-option" name="selector1">
+					<input type="checkbox" id="b-option" name="skillsCheckboxes" value="Android Developer">
 					<label for="b-option"><span style="color:white;">Android Developer</label>
 					<div class="check"><div class="inside"></div></div>
 					
-					<input type="checkbox" id="c-option" name="selector1">
+					<input type="checkbox" id="c-option" name="skillsCheckboxes" value="Game Developer">
 					<label for="c-option"><span style="color:white;">Game Developer</label>
 					<div class="check"><div class="inside"></div></div>
 					
-					<input type="checkbox" id="d-option" name="selector1">
+					<input type="checkbox" id="d-option" name="skillsCheckboxes" value="Competitive Programmer">
 					<label for="d-option"><span style="color:white;">Competitive Programmer</label>
-					<div class="check"></div>
+					<div class="check"><div class="inside"></div></div>
 					
-					<input type="checkbox" id="e-option" name="selector1">
+					<input type="checkbox" id="e-option" name="skillsCheckboxes" value="Design/Photoshop">
 					<label for="e-option"><span style="color:white;">Design/Photoshop</label>
 					<div class="check"><div class="inside"></div></div>
 
 					
-					<input type="checkbox" id="e-option" name="selector1">
+					<input type="checkbox" id="e-option" name="skillsCheckboxes" value="Content Writing">
 					<label for="e-option"><span style="color:white;">Content Writing</label>
 					<div class="check"><div class="inside"></div></div>
 
@@ -123,21 +128,21 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 				<ul>
 						<li class="text"><span style="color:white;">Platform you code :  </li>
 						<ul>
-						<input type="radio" id="a-option" name="selector1">
+						<input type="checkbox" id="a-option" name="platformCheckboxes" value="Hackerrank">
 						<label for="a-option"><span style="color:white;">Hackerrank</label>
-						<div class="check"></div>
+						<div class="check"><div class="inside"></div></div>
 						
-						<input type="radio" id="b-option" name="selector1">
+						<input type="checkbox" id="b-option" name="platformCheckboxes" value="Hackerearth">
 						<label for="b-option"><span style="color:white;">Hackerearth</label>
 						<div class="check"><div class="inside"></div></div>
 						
-						<input type="radio" id="c-option" name="selector1">
+						<input type="checkbox" id="c-option" name="platformCheckboxes" value="CodeChef">
 						<label for="c-option"><span style="color:white;">CodeChef</label>
 						<div class="check"><div class="inside"></div></div>
 						
-						<input type="radio" id="d-option" name="selector1">
+						<input type="checkbox" id="d-option" name="platformCheckboxes" value="Codeforces">
 						<label for="d-option"><span style="color:white;">Codeforces</label>
-						<div class="check"></div>
+						<div class="check"><div class="inside"></div></div>
 						
 						</ul>
 						
@@ -147,23 +152,23 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 				<ul>
 						<li class="text"><span style="color:white;">Data Structure Knowledge :  </li>
 						<ul>
-						<input type="radio" id="a-option" name="selector1">
+						<input type="radio" id="a-option" name="knowledgeRadio" value='1'>
 						<label for="a-option"><span style="color:white;">Noob</label>
-						<div class="check"></div>
+						<div class="check"><div class="inside"></div></div>
 						
-						<input type="radio" id="b-option" name="selector1">
+						<input type="radio" id="b-option" name="knowledgeRadio" value='2'>
 						<label for="b-option"><span style="color:white;">Beginner</label>
 						<div class="check"><div class="inside"></div></div>
 						
-						<input type="radio" id="c-option" name="selector1">
+						<input type="radio" id="c-option" name="knowledgeRadio" value='3'>
 						<label for="c-option"><span style="color:white;">Medium</label>
 						<div class="check"><div class="inside"></div></div>
 						
-						<input type="radio" id="d-option" name="selector1">
+						<input type="radio" id="d-option" name="knowledgeRadio" value ='4'>
 						<label for="d-option"><span style="color:white;">Pro</label>
-						<div class="check"></div>
+						<div class="check"><div class="inside"></div></div>
 						
-						<input type="radio" id="e-option" name="selector1">
+						<input type="radio" id="e-option" name="knowledgeRadio" value='5'>
 						<label for="e-option"><span style="color:white;">Expert</label>
 						<div class="check"><div class="inside"></div></div>
 						</ul>
@@ -171,9 +176,14 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 					</ul>
 					
 					<ul>
-							<li class="text">Handle Name :  </li>
-							<li><input name="Handle Name" type="text" required></li>
-						</ul>
+						<li class="text">Handle Name :  </li>
+						<li><input name="Handle Name" type="text" required></li>
+					</ul>
+
+					<ul>
+						<li class="text">Branch :  </li>
+						<li><input name="Branch Name" type="text" placeholder="C.S.E/I.T/M.E.C.E"required></li>
+					</ul>
 				
 				
 			
@@ -194,5 +204,6 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 	<p>&copy; 2019 Recardo Club Form. All rights reserved | Designed <i class="icon-heart color-danger" aria-hidden="true"></i> by <a href="https://www.instagram.com/recardo_abesit/" target="_blank">Recardo</a></p>
 </div>
 <!--//footer-->
+
 </body>
 </html>

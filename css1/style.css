@@ -244,6 +244,17 @@ li.tel {
   padding-top: 7px;
   font-family: "Roboto", sans-serif;
 }
+li.email {
+  width: 24%;
+  color: white;
+  float: left;
+  text-align: right;
+  letter-spacing: 1px;
+  font-size: 15px;
+  text-transform: capitalize;
+  padding-top: 7px;
+  font-family: "Roboto", sans-serif;
+}
 
 .agileits-main li input[type="text"],
 .agileits-main ul li textarea {
@@ -290,6 +301,43 @@ li.tel {
   border: 1px solid white;
   font-family: "Roboto", sans-serif;
   margin-bottom: 16px;
+}
+
+.agileits-main li input[type="email"],
+.agileits-main ul li textarea {
+  padding: 7px;
+  color: white;
+  outline: none;
+  width: 62%;
+  float: left;
+  margin-left: 6px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid white;
+  font-family: "Roboto", sans-serif;
+  margin-bottom: 16px;
+}
+
+select {
+  padding: 7px;
+  color: white;
+  outline: none;
+  width: 64.5%;
+  float: left;
+  margin-left: 6px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid white;
+  font-family: "Roboto", sans-serif;
+  overflow: visible !important;
+  overflow-x: visible !important;
+  overflow-y: visible !important;
+}
+option {
+  font-weight: normal;
+  display: block;
+  white-space: pre;
+  color: black;
+  min-height: 1.2em;
+  padding: 0px 2px 1px;
 }
 
 .agile-submit {

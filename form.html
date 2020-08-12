@@ -35,11 +35,11 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 
 	<div class="agileits-main">
 		<div class="wrap">
-		<form action="localhost:3030/api/v1/auth/sign_up" method="post">
+			<form action="localhost:3030/api/v1/auth/sign_up" method="post">
 		
 			<ul>
 				<li class="text">E-mail  :  </li>
-				<li><input name="E-mail" type="text" required></li>
+				<li><input name="email" type="email" required></li>
 			</ul>
 			<ul>
 				<li class="text">name  :  </li>
@@ -48,7 +48,13 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 			</ul>
 			<ul>
 				<li class="number">Year  :  </li>
-				<li><input name="year" type="number" min="1" max="4" required></li>
+				<!-- <li><input name="year" type="number" min="1" max="4" required></li> -->
+				<li><select id="year" name="year">
+					<option value="1">I st</option>
+					<option value="2">II nd</option>
+					<option value="3">III rd</option>
+					<option value="4">IV th</option>
+				</select></li>
 				<div class="check"><div class="inside"></div></div>
 			</ul>
 			<ul>
@@ -151,38 +157,32 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 				
 				<ul>
 						<li class="text"><span style="color:white;">Data Structure Knowledge :  </li>
-						<ul>
-						<input type="radio" id="a-option" name="knowledgeRadio" value='1'>
-						<label for="a-option"><span style="color:white;">Noob</label>
-						<div class="check"><div class="inside"></div></div>
-						
-						<input type="radio" id="b-option" name="knowledgeRadio" value='2'>
-						<label for="b-option"><span style="color:white;">Beginner</label>
-						<div class="check"><div class="inside"></div></div>
-						
-						<input type="radio" id="c-option" name="knowledgeRadio" value='3'>
-						<label for="c-option"><span style="color:white;">Medium</label>
-						<div class="check"><div class="inside"></div></div>
-						
-						<input type="radio" id="d-option" name="knowledgeRadio" value ='4'>
-						<label for="d-option"><span style="color:white;">Pro</label>
-						<div class="check"><div class="inside"></div></div>
-						
-						<input type="radio" id="e-option" name="knowledgeRadio" value='5'>
-						<label for="e-option"><span style="color:white;">Expert</label>
-						<div class="check"><div class="inside"></div></div>
-						</ul>
+						<li><select id="dSKnowleadge" name="dataStructureKnowledge">
+							<option value="noob">Never Heard</option>
+							<option value="begineer">Begineer</option>
+							<option value="medium">Medium</option>
+							<option value="pro">Pro</option>
+							<option value="expert">Expert</option>
+						</select></li>
 						
 					</ul>
 					
 					<ul>
 						<li class="text">Handle Name :  </li>
-						<li><input name="Handle Name" type="text" required></li>
+						<li><input name="handleName" type="text" required></li>
 					</ul>
 
 					<ul>
 						<li class="text">Branch :  </li>
-						<li><input name="Branch Name" type="text" placeholder="C.S.E/I.T/M.E.C.E"required></li>
+						<li><select id="branch" name="branch">
+							<option value="C.S.E">Computer Science & Engineeering</option>
+							<option value="C.S.E with Data Science">C.S.E with Data Science</option>
+							<option value="C.S.E with AI">C.S.E with AI</option>
+							<option value="C.S.E with IOT">C.S.E with IOT</option>
+							<option value="I.T">I.T</option>
+							<option value="E.C.E">Electronics & Communication Engineeering</option>
+							<option value="M.E">Mechanical Engineeering</option>
+						</select></li>
 					</ul>
 				
 				

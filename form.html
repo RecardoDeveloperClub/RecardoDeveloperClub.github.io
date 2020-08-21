@@ -205,7 +205,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 	<p>&copy; 2019 Recardo Club Form. All rights reserved | Designed <i class="icon-heart color-danger" aria-hidden="true"></i> by <a href="https://www.instagram.com/recardo_abesit/" target="_blank">Recardo</a></p>
 </div>
 <!--//footer-->
-	<script src="../RecardoDeveloperClub.github.io/node_modules/axios/dist/axios.min.js"></script>
+	<script src="./node_modules/axios/dist/axios.min.js"></script>
 	<script>
 		document.getElementById("submit-button").addEventListener("click", function(event){ 
             var languageCheckedValue = []; 
@@ -241,7 +241,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 				formData.append(phoneNo,phoneNo);
 				formData.append(rollNo,rollNo);
 				formData.append(section,section);
-				var url = "http://localhost:3000/api/v1/students/signup";
+				var url = "http://18.219.78.233:3000/api/v1/students/signup";
 				const customHeaders = {
   					'content-type': 'application/json',
 					  'Access-Control-Request-Method': 'POST',

@@ -60,7 +60,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 			</ul>
 			<ul>
 				<li class="number">mobile no  :  </li>
-				<li><input id="mobile" name="mobile" type="tel" type="tel" size="10" placeholder="9910-583-896" pattern="[0-9]{4}-[0-9]{3}-[0-9]{3}" minlength="7" maxlength="12" required></li>
+				<li><input id="mobile" name="mobile" type="tel" type="tel" size="10" placeholder="9910583896" minlength="7" maxlength="10" required></li>
 				<div class="check"><div class="inside"></div></div>
 			</ul>
 			<ul>
@@ -202,10 +202,10 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 <!--//main-->
 <!--footer-->
 <div class="footer-w3">
-	<p>&copy; 2019 Recardo Club Form. All rights reserved | Designed <i class="icon-heart color-danger" aria-hidden="true"></i> by <a href="https://www.instagram.com/recardo_abesit/" target="_blank">Recardo</a></p>
+	<p>&copy; 2019 Recardo Club Form. All rights reserved | Designed <i class="icon-heart color-danger" aria-hidden="true"></i> by <a href="http://www.instagram.com/recardo_abesit/" target="_blank">Recardo</a></p>
 </div>
 <!--//footer-->
-	<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+	<script src="http://unpkg.com/axios/dist/axios.min.js"></script>
 	<script>
 		document.getElementById("submit-button").addEventListener("click", function(event){ 
             var languageCheckedValue = []; 
@@ -241,7 +241,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 				formData.append(phoneNo,phoneNo);
 				formData.append(rollNo,rollNo);
 				formData.append(section,section);
-				var url = "https://18.219.78.233:3000/api/v1/students/signup";
+				var url = "http://18.219.78.233:3000/api/v1/students/signup";
 				const customHeaders = {
   					'content-type': 'application/json',
 					  'Access-Control-Request-Method': 'POST',
